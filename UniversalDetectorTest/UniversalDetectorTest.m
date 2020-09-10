@@ -28,7 +28,7 @@
 + (NSData*) dataWithFixtureFile:(NSString*)filename {
     NSBundle* bundle = [NSBundle bundleForClass:[self class]];
     NSString* path = [bundle pathForResource:filename ofType:@"html"];
-    return [NSData dataWithContentsOfMappedFile:path];
+    return [NSData dataWithContentsOfFile:path];
 }
 
 - (void)testEncoding
@@ -38,7 +38,7 @@
     XCTAssertNotNil(data,);
     UniversalDetector* detector = [[UniversalDetector alloc] init];
 
-    CFStringEncodings encoding = [detector encodingWithData:data];
+    CFStringEncoding encoding = [detector encodingWithData:data];
     XCTAssertTrue(CFStringIsEncodingAvailable(encoding));
     XCTAssertEqual(encoding, kCFStringEncodingBig5);
     
