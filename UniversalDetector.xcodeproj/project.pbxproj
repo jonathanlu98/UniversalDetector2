@@ -653,6 +653,11 @@
 				LastTestingUpgradeCheck = 0700;
 				LastUpgradeCheck = 1170;
 				ORGANIZATIONNAME = "Ignition Soft";
+				TargetAttributes = {
+					54ABD36A1738AF9500825BAD = {
+						ProvisioningStyle = Automatic;
+					};
+				};
 			};
 			buildConfigurationList = 54ABD3151738AE2300825BAD /* Build configuration list for PBXProject "UniversalDetector" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1075,6 +1080,10 @@
 		54ABD37C1738AF9500825BAD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
@@ -1085,12 +1094,18 @@
 				INFOPLIST_FILE = "UniversalDetectorTest/UniversalDetectorTest-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "hk.ignition.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 			};
 			name = Debug;
 		};
 		54ABD37D1738AF9500825BAD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
@@ -1101,6 +1116,8 @@
 				INFOPLIST_FILE = "UniversalDetectorTest/UniversalDetectorTest-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "hk.ignition.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 			};
 			name = Release;
 		};
