@@ -78,7 +78,7 @@
     data = [UniversalDetectorTest dataWithFixtureFile:@"ascii"];
     XCTAssertNotNil(data);
     encoding = [detector encodingWithData:data];
-    XCTAssertEqual(encoding, kCFStringEncodingInvalidId);
+    XCTAssertEqual(encoding, kCFStringEncodingASCII);
 }
 
 - (void)testEncodingAsString
@@ -89,7 +89,7 @@
     UniversalDetector* detector = [[UniversalDetector alloc] init];
 
     NSString* encoding = [detector encodingAsStringWithData:data];
-    XCTAssertEqualObjects(encoding, @"Big5");
+    XCTAssertEqualObjects(encoding, @"BIG5");
 
     // http://www.jiji.com/jc/c?g=pol&k=2013050700380
     data = [UniversalDetectorTest dataWithFixtureFile:@"jijicom"];
@@ -103,7 +103,7 @@
     XCTAssertNotNil(data);
     
     encoding = [detector encodingAsStringWithData:data];
-    XCTAssertEqualObjects(encoding, @"Shift_JIS");
+    XCTAssertEqualObjects(encoding, @"SHIFT_JIS");
     
     // http://www.theverge.com/2013/5/6/4303072/fitbit-flex-review
     data = [UniversalDetectorTest dataWithFixtureFile:@"theverge"];
@@ -117,13 +117,13 @@
     XCTAssertNotNil(data);
     
     encoding = [detector encodingAsStringWithData:data];
-    XCTAssertEqualObjects(encoding, @"Shift_JIS");
+    XCTAssertEqualObjects(encoding, @"SHIFT_JIS");
 
     // pure ascii encoding
     data = [UniversalDetectorTest dataWithFixtureFile:@"ascii"];
     XCTAssertNotNil(data);
     encoding = [detector encodingAsStringWithData:data];
-    XCTAssertTrue([encoding isEqualToString:@"US-ASCII"] || [encoding isEqualToString:@""]);
+    XCTAssertTrue([encoding isEqualToString:@"ASCII"] || [encoding isEqualToString:@""]);
 }
 
 @end
