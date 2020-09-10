@@ -1,12 +1,12 @@
 namespace :test do
   desc "Run the UniversalDetector Tests for iOS"
   task :ios do
-    $ios_success = system("xctool -project UniversalDetector.xcodeproj -scheme UniversalDetector -sdk iphonesimulator -configuration Release test -test-sdk iphonesimulator test")
+    $ios_success = system("xctool -project UniversalDetector.xcodeproj -scheme UniversalDetector -sdk iphonesimulator -configuration Release run-tests -test-sdk iphonesimulator")
   end
 
   desc "Run the UniversalDetector Tests for Mac OS X"
   task :osx do
-    $osx_success = system("xctool -project UniversalDetector.xcodeproj -scheme UniversalDetectorOSX -sdk macosx -configuration Release test -test-sdk macosx")
+    $osx_success = system("xctool -project UniversalDetector.xcodeproj -scheme UniversalDetectorOSX -sdk macosx -configuration Release run-tests -test-sdk macosx")
   end
 end
 
