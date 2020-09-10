@@ -21,6 +21,6 @@ Pod::Spec.new do |s|
        'WARNING_CFLAGS' => '-Wno-shorten-64-to-32 -Wno-logical-op-parentheses'
   }
 
-  s.library             = 'stdc++'
+  s.library             = 'c++'
   s.requires_arc = true
 end
