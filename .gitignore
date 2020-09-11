@@ -17,3 +17,4 @@ Pods
 xcuserdata
 DerivedData
 *.xccheckout
+*.xcscmblueprint
