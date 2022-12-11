@@ -183,7 +183,7 @@
 		5441913F17A0E64E007E3C1D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		5441914017A0E64E007E3C1D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5441914317A0E64F007E3C1D /* UniversalDetectorOSX-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UniversalDetectorOSX-Prefix.pch"; sourceTree = "<group>"; };
-		5441914C17A0E64F007E3C1D /* UniversalDetectorOSXTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UniversalDetectorOSXTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5441914C17A0E64F007E3C1D /* UniversalDetectorOSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UniversalDetectorOSXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5441915417A0E64F007E3C1D /* UniversalDetectorOSXTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UniversalDetectorOSXTests-Info.plist"; sourceTree = "<group>"; };
 		5441915617A0E64F007E3C1D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5441915817A0E64F007E3C1D /* UniversalDetectorOSXTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UniversalDetectorOSXTests.h; sourceTree = "<group>"; };
@@ -391,7 +391,7 @@
 				54ABD31A1738AE2300825BAD /* libUniversalDetector.a */,
 				54ABD36B1738AF9500825BAD /* UniversalDetectorTest.xctest */,
 				5441913A17A0E64E007E3C1D /* libUniversalDetectorOSX.a */,
-				5441914C17A0E64F007E3C1D /* UniversalDetectorOSXTests.octest */,
+				5441914C17A0E64F007E3C1D /* UniversalDetectorOSXTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -611,7 +611,7 @@
 			);
 			name = UniversalDetectorOSXTests;
 			productName = UniversalDetectorOSXTests;
-			productReference = 5441914C17A0E64F007E3C1D /* UniversalDetectorOSXTests.octest */;
+			productReference = 5441914C17A0E64F007E3C1D /* UniversalDetectorOSXTests.xctest */;
 			productType = "com.apple.product-type.bundle.ocunit-test";
 		};
 		54ABD3191738AE2300825BAD /* UniversalDetector */ = {
@@ -936,6 +936,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -943,10 +944,14 @@
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				INFOPLIST_FILE = "UniversalDetectorOSXTests/UniversalDetectorOSXTests-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				OTHER_LDFLAGS = (
+					"-framework",
+					XCTest,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "hk.ignition.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				WRAPPER_EXTENSION = octest;
+				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
 		};
@@ -955,6 +960,7 @@
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -962,10 +968,14 @@
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				INFOPLIST_FILE = "UniversalDetectorOSXTests/UniversalDetectorOSXTests-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				OTHER_LDFLAGS = (
+					"-framework",
+					XCTest,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "hk.ignition.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				WRAPPER_EXTENSION = octest;
+				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
 		};
