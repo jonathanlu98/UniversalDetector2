@@ -149,6 +149,8 @@
 		C4AA5A9A250A5FA80094095E /* nsUTF8Prober.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4AA5A22250A5FA60094095E /* nsUTF8Prober.cpp */; };
 		C4AA5A9B250A5FA80094095E /* nsEscSM.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4AA5A25250A5FA60094095E /* nsEscSM.cpp */; };
 		C4AA5A9C250A5FA80094095E /* nsEscSM.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4AA5A25250A5FA60094095E /* nsEscSM.cpp */; };
+		C4C160A729460F5D00C55E59 /* LangNorwegianModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4C160A529460F5100C55E59 /* LangNorwegianModel.cpp */; };
+		C4C160A829460F5E00C55E59 /* LangNorwegianModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C4C160A529460F5100C55E59 /* LangNorwegianModel.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -285,6 +287,7 @@
 		C4AA5A26250A5FA60094095E /* nsLatin1Prober.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nsLatin1Prober.h; sourceTree = "<group>"; };
 		C4AA5A27250A5FA60094095E /* nsEUCTWProber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nsEUCTWProber.h; sourceTree = "<group>"; };
 		C4AA5A28250A5FA60094095E /* uchardet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uchardet.h; sourceTree = "<group>"; };
+		C4C160A529460F5100C55E59 /* LangNorwegianModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LangNorwegianModel.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -529,6 +532,7 @@
 		C4AA59FB250A5FA60094095E /* LangModels */ = {
 			isa = PBXGroup;
 			children = (
+				C4C160A529460F5100C55E59 /* LangNorwegianModel.cpp */,
 				C4AA59FC250A5FA60094095E /* LangHungarianModel.cpp */,
 				C4AA59FD250A5FA60094095E /* LangLatvianModel.cpp */,
 				C4AA59FE250A5FA60094095E /* LangVietnameseModel.cpp */,
@@ -748,6 +752,7 @@
 				C4AA5A3A250A5FA60094095E /* nsSBCharSetProber.cpp in Sources */,
 				C4AA5A38250A5FA60094095E /* nsSBCSGroupProber.cpp in Sources */,
 				C4AA5A42250A5FA70094095E /* nsGB2312Prober.cpp in Sources */,
+				C4C160A829460F5E00C55E59 /* LangNorwegianModel.cpp in Sources */,
 				C4AA5A60250A5FA70094095E /* LangSloveneModel.cpp in Sources */,
 				C4AA5A98250A5FA80094095E /* nsEscCharsetProber.cpp in Sources */,
 				C4AA5A82250A5FA80094095E /* LangSwedishModel.cpp in Sources */,
@@ -845,6 +850,7 @@
 				C4AA5A5F250A5FA70094095E /* LangSloveneModel.cpp in Sources */,
 				C4AA5A35250A5FA60094095E /* nsMBCSGroupProber.cpp in Sources */,
 				C4AA5A73250A5FA70094095E /* LangPolishModel.cpp in Sources */,
+				C4C160A729460F5D00C55E59 /* LangNorwegianModel.cpp in Sources */,
 				C4AA5A6B250A5FA70094095E /* LangSpanishModel.cpp in Sources */,
 				C4AA5A45250A5FA70094095E /* JpCntx.cpp in Sources */,
 				C4AA5A83250A5FA80094095E /* LangTurkishModel.cpp in Sources */,
